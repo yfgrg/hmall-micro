@@ -1,0 +1,401 @@
+11:49:21:742  INFO 16352 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 16352 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+11:49:21:744 DEBUG 16352 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+11:49:21:745  INFO 16352 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+11:49:23:523  INFO 16352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+11:49:23:535  INFO 16352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+11:49:23:535  INFO 16352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+11:49:23:702  INFO 16352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+11:49:23:703  INFO 16352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1916 ms
+11:49:25:403  INFO 16352 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+11:49:25:476  INFO 16352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+11:49:25:479  INFO 16352 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+11:49:25:481  INFO 16352 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+11:49:25:508  INFO 16352 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+11:49:25:653  INFO 16352 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 4.297 seconds (JVM running for 5.326)
+11:51:07:461  INFO 16352 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:51:07:463  INFO 16352 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+11:51:07:480  INFO 16352 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+11:51:24:853  INFO 16352 --- [http-nio-8081-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+11:51:25:201  INFO 16352 --- [http-nio-8081-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+11:51:25:208 DEBUG 16352 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+11:51:25:233 DEBUG 16352 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002672302(Long), 100002624500(Long), 100002533430(Long)
+11:51:25:273 DEBUG 16352 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+11:54:39:397  INFO 16352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+11:54:39:413  INFO 16352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+12:02:07:322  INFO 27408 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 27408 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+12:02:07:325 DEBUG 27408 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+12:02:07:325  INFO 27408 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+12:02:08:507  INFO 27408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+12:02:08:515  INFO 27408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+12:02:08:515  INFO 27408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+12:02:08:633  INFO 27408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+12:02:08:633  INFO 27408 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1265 ms
+12:02:09:961  INFO 27408 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+12:02:10:031  INFO 27408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+12:02:10:032  INFO 27408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+12:02:10:035  INFO 27408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+12:02:10:057  INFO 27408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+12:02:10:164  INFO 27408 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 3.209 seconds (JVM running for 4.136)
+12:20:44:105  INFO 27408 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:20:44:108  INFO 27408 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+12:20:44:131  INFO 27408 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+12:20:44:264  INFO 27408 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+12:20:44:590  INFO 27408 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+12:20:44:600 DEBUG 27408 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+12:20:44:628 DEBUG 27408 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+12:20:44:660 DEBUG 27408 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+12:24:01:610  INFO 27408 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+12:24:01:634  INFO 27408 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+14:53:51:797  INFO 24256 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 24256 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+14:53:51:799 DEBUG 24256 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+14:53:51:801  INFO 24256 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+14:53:53:192  INFO 24256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7081 (http)
+14:53:53:201  INFO 24256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:53:53:201  INFO 24256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+14:53:53:319  INFO 24256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:53:53:319  INFO 24256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1467 ms
+14:53:54:105  INFO 5388 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 5388 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+14:53:54:108 DEBUG 5388 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+14:53:54:108  INFO 5388 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+14:53:55:018  INFO 24256 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:53:55:086  INFO 24256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7081 (http) with context path ''
+14:53:55:088  INFO 24256 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:53:55:090  INFO 24256 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:53:55:114  INFO 24256 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:53:55:235  INFO 24256 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 3.902 seconds (JVM running for 4.946)
+14:53:55:294  INFO 5388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+14:53:55:302  INFO 5388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:53:55:303  INFO 5388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+14:53:55:428  INFO 5388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:53:55:428  INFO 5388 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1265 ms
+14:53:57:298  INFO 5388 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:53:57:379  INFO 5388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+14:53:57:380  INFO 5388 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:53:57:382  INFO 5388 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:53:57:412  INFO 5388 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:53:57:539  INFO 5388 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 3.816 seconds (JVM running for 4.835)
+14:57:27:079  INFO 5388 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:57:27:083  INFO 5388 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+14:57:27:105  INFO 5388 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+14:57:39:308  INFO 5388 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+14:57:39:654  INFO 5388 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+14:57:39:664 DEBUG 5388 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+14:57:39:691 DEBUG 5388 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+14:57:39:723 DEBUG 5388 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:20:35:576  INFO 5388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:20:35:597  INFO 5388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:20:43:098  INFO 32288 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+15:20:43:103  INFO 32288 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+15:20:43:108  INFO 32288 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+15:20:43:113  INFO 32288 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+15:20:43:276  INFO 32288 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 32288 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+15:20:43:276 DEBUG 32288 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:20:43:276  INFO 32288 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+15:20:44:360  INFO 32288 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7633ed3c-c239-312f-86aa-b1cbde43a345
+15:20:44:733  INFO 32288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7081 (http)
+15:20:44:746  INFO 32288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:20:44:746  INFO 32288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:20:44:969  INFO 32288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:20:44:970  INFO 32288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1644 ms
+15:20:45:559  INFO 31020 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+15:20:45:564  INFO 31020 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+15:20:45:569  INFO 31020 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+15:20:45:569  INFO 31020 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+15:20:45:674  INFO 31020 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 31020 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+15:20:45:674 DEBUG 31020 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:20:45:674  INFO 31020 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+15:20:46:524  INFO 31020 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7633ed3c-c239-312f-86aa-b1cbde43a345
+15:20:46:837  INFO 31020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+15:20:46:844  INFO 31020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:20:46:846  INFO 31020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:20:46:990  INFO 31020 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:20:46:990  INFO 31020 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1283 ms
+15:20:47:748  INFO 32288 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:20:48:567  INFO 32288 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+15:20:48:567  INFO 32288 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+15:20:49:730  INFO 31020 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:20:50:201  INFO 32288 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+15:20:50:202  INFO 32288 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+15:20:50:203  INFO 32288 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+15:20:50:203  INFO 32288 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+15:20:50:389  INFO 32288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7081 (http) with context path ''
+15:20:50:410  INFO 32288 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:7081 register finished
+15:20:50:433  INFO 31020 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+15:20:50:435  INFO 31020 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+15:20:51:004  INFO 32288 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:20:51:006  INFO 32288 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:20:51:032  INFO 32288 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:20:51:151  INFO 32288 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 9.25 seconds (JVM running for 10.306)
+15:20:52:117  INFO 31020 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+15:20:52:121  INFO 31020 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+15:20:52:122  INFO 31020 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+15:20:52:124  INFO 31020 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+15:20:52:236  INFO 31020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+15:20:52:247  INFO 31020 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:8081 register finished
+15:20:52:745  INFO 31020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:20:52:747  INFO 31020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:20:52:770  INFO 31020 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:20:52:876  INFO 31020 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 8.529 seconds (JVM running for 9.658)
+15:28:33:150  INFO 32288 --- [http-nio-7081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:28:33:153  INFO 32288 --- [http-nio-7081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:28:33:168  INFO 32288 --- [http-nio-7081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+15:28:33:295  INFO 32288 --- [http-nio-7081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:28:33:642  INFO 32288 --- [http-nio-7081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:28:33:653 DEBUG 32288 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:28:33:685 DEBUG 32288 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+15:28:33:717 DEBUG 32288 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:28:34:744  INFO 31020 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:28:34:746  INFO 31020 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:28:34:761  INFO 31020 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+15:28:34:915  INFO 31020 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:28:35:264  INFO 31020 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:28:35:272 DEBUG 31020 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:28:35:307 DEBUG 31020 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+15:28:35:344 DEBUG 31020 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:40:06:561  WARN 32288 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:40:06:561  WARN 32288 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+15:40:06:561  WARN 32288 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:40:06:567  WARN 32288 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+15:40:06:565  WARN 32288 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:40:06:568  WARN 32288 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:40:06:578  WARN 31020 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:40:06:578  WARN 31020 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+15:40:06:578  WARN 31020 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:40:06:582  WARN 31020 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:40:06:583  WARN 31020 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+15:40:06:585  WARN 31020 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:40:07:228  INFO 32288 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:40:07:230  INFO 31020 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:40:07:241  INFO 32288 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:40:07:241  INFO 31020 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:40:07:261  INFO 32288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:40:07:261  INFO 31020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:40:07:291  INFO 32288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:40:07:295  INFO 31020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:47:15:464  INFO 6716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+15:47:15:470  INFO 6716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+15:47:15:477  INFO 6716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+15:47:15:478  INFO 6716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+15:47:15:632  INFO 6716 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 6716 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+15:47:15:634 DEBUG 6716 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:47:15:634  INFO 6716 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+15:47:16:632  INFO 6716 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7633ed3c-c239-312f-86aa-b1cbde43a345
+15:47:17:069  INFO 6716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7081 (http)
+15:47:17:083  INFO 6716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:47:17:083  INFO 6716 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:47:17:250  INFO 6716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:47:17:251  INFO 6716 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1563 ms
+15:47:18:118  INFO 25824 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+15:47:18:122  INFO 25824 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+15:47:18:127  INFO 25824 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+15:47:18:128  INFO 25824 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+15:47:18:271  INFO 25824 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 25824 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+15:47:18:272 DEBUG 25824 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:47:18:272  INFO 25824 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+15:47:19:228  INFO 25824 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7633ed3c-c239-312f-86aa-b1cbde43a345
+15:47:19:534  INFO 25824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+15:47:19:543  INFO 25824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:47:19:543  INFO 25824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:47:19:687  INFO 25824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:47:19:688  INFO 25824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1362 ms
+15:47:20:184  INFO 6716 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:47:20:928  INFO 6716 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+15:47:20:930  INFO 6716 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+15:47:22:262  INFO 25824 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:47:22:478  INFO 6716 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+15:47:22:480  INFO 6716 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+15:47:22:481  INFO 6716 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+15:47:22:482  INFO 6716 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+15:47:22:546  INFO 6716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7081 (http) with context path ''
+15:47:22:553  INFO 6716 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:7081 register finished
+15:47:22:982  INFO 25824 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+15:47:22:983  INFO 25824 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+15:47:23:131  INFO 6716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:47:23:133  INFO 6716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:47:23:154  INFO 6716 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:47:23:264  INFO 6716 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 9.011 seconds (JVM running for 10.211)
+15:47:24:607  INFO 25824 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+15:47:24:610  INFO 25824 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+15:47:24:610  INFO 25824 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+15:47:24:611  INFO 25824 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+15:47:24:692  INFO 25824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+15:47:24:699  INFO 25824 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:8081 register finished
+15:47:25:202  INFO 25824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:47:25:204  INFO 25824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:47:25:236  INFO 25824 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:47:25:339  INFO 25824 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 8.405 seconds (JVM running for 9.697)
+15:49:07:940  INFO 6716 --- [http-nio-7081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:49:07:942  INFO 6716 --- [http-nio-7081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:49:07:946  INFO 6716 --- [http-nio-7081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+15:49:08:056  INFO 6716 --- [http-nio-7081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:49:08:400  INFO 6716 --- [http-nio-7081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:49:08:410 DEBUG 6716 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:49:08:440 DEBUG 6716 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+15:49:08:475 DEBUG 6716 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+16:23:12:150  WARN 25824 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+16:23:12:150  WARN 25824 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:23:12:150  WARN 25824 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:23:12:156  WARN 25824 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:23:12:156  WARN 25824 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+16:23:12:158  WARN 25824 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:23:12:158  WARN 6716 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+16:23:12:158  WARN 6716 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:23:12:158  WARN 6716 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:23:12:160  WARN 6716 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:23:12:160  WARN 6716 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+16:23:12:161  WARN 6716 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:23:12:740  INFO 6716 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:23:12:749  INFO 25824 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:23:12:757  INFO 6716 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:23:12:760  INFO 25824 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:23:12:771  INFO 6716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:23:12:792  INFO 6716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:25:50:275  INFO 29156 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+16:25:50:282  INFO 29156 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+16:25:50:294  INFO 29156 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+16:25:50:299  INFO 29156 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+16:25:50:440  INFO 29156 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 29156 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+16:25:50:441 DEBUG 29156 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:25:50:441  INFO 29156 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+16:25:51:575  INFO 29156 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d429b62f-ffea-3685-9c3b-2490d38438c3
+16:25:51:982  INFO 29156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7081 (http)
+16:25:51:994  INFO 29156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:25:51:994  INFO 29156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:25:52:226  INFO 29156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:25:52:227  INFO 29156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1731 ms
+16:25:52:755  INFO 6116 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+16:25:52:760  INFO 6116 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+16:25:52:768  INFO 6116 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+16:25:52:772  INFO 6116 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+16:25:52:898  INFO 6116 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 6116 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+16:25:52:899 DEBUG 6116 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:25:52:899  INFO 6116 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+16:25:53:963  INFO 6116 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d429b62f-ffea-3685-9c3b-2490d38438c3
+16:25:54:299  INFO 6116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+16:25:54:308  INFO 6116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:25:54:308  INFO 6116 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:25:54:470  INFO 6116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:25:54:470  INFO 6116 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1531 ms
+16:25:55:148  INFO 29156 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:25:56:057  INFO 29156 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:25:56:057  INFO 29156 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:25:57:135  INFO 6116 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:25:57:722  INFO 29156 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+16:25:57:725  INFO 29156 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+16:25:57:726  INFO 29156 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+16:25:57:726  INFO 29156 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+16:25:57:794  INFO 29156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7081 (http) with context path ''
+16:25:57:802  INFO 29156 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:7081 register finished
+16:25:58:007  INFO 6116 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:25:58:009  INFO 6116 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:25:58:352  INFO 29156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:25:58:355  INFO 29156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:25:58:377  INFO 29156 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:25:58:476  INFO 29156 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 9.443 seconds (JVM running for 10.703)
+16:25:59:666  INFO 6116 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+16:25:59:668  INFO 6116 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+16:25:59:669  INFO 6116 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+16:25:59:669  INFO 6116 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+16:25:59:752  INFO 6116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+16:25:59:761  INFO 6116 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:8081 register finished
+16:26:00:271  INFO 6116 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:26:00:274  INFO 6116 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:26:00:298  INFO 6116 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:26:00:391  INFO 6116 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 8.871 seconds (JVM running for 10.171)
+16:27:52:233  INFO 29156 --- [http-nio-7081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:27:52:234  INFO 29156 --- [http-nio-7081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:27:52:236  INFO 29156 --- [http-nio-7081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+16:27:52:322  INFO 29156 --- [http-nio-7081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:27:52:631  INFO 29156 --- [http-nio-7081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:27:52:639 DEBUG 29156 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+16:27:52:666 DEBUG 29156 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+16:27:52:694 DEBUG 29156 --- [http-nio-7081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:03:39:344  INFO 6116 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:03:39:346  INFO 6116 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:03:39:366  INFO 6116 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+17:15:28:452  WARN 29156 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:15:28:452  WARN 29156 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:15:28:456  WARN 29156 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:15:28:452  WARN 29156 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+17:15:28:458  WARN 29156 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+17:15:28:459  WARN 29156 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:15:28:471  WARN 6116 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:15:28:471  WARN 6116 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+17:15:28:471  WARN 6116 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:15:28:476  WARN 6116 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:15:28:478  WARN 6116 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+17:15:28:479  WARN 6116 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:15:29:184  INFO 29156 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:15:29:199  INFO 6116 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:15:29:200  INFO 29156 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:15:29:216  INFO 6116 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:15:29:226  INFO 29156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:15:29:257  INFO 29156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:17:18:627  INFO 30716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+17:17:18:632  INFO 30716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+17:17:18:644  INFO 30716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+17:17:18:645  INFO 30716 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+17:17:18:788  INFO 30716 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 30716 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+17:17:18:788 DEBUG 30716 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+17:17:18:788  INFO 30716 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+17:17:19:895  INFO 30716 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d429b62f-ffea-3685-9c3b-2490d38438c3
+17:17:20:296  INFO 30716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7081 (http)
+17:17:20:307  INFO 30716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:17:20:307  INFO 30716 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:17:20:491  INFO 30716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:17:20:492  INFO 30716 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1650 ms
+17:17:20:953  INFO 34276 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+17:17:20:964  INFO 34276 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+17:17:20:979  INFO 34276 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+17:17:20:983  INFO 34276 --- [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+17:17:21:136  INFO 34276 --- [main] com.hmall.item.ItemServiceApplication    : Starting ItemServiceApplication using Java 11.0.23 on LAPTOP-RMAHIPBG with PID 34276 (D:\IdeaData\hmall-micro\item-service\target\classes started by admin in D:\IdeaData\hmall-micro)
+17:17:21:137 DEBUG 34276 --- [main] com.hmall.item.ItemServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+17:17:21:137  INFO 34276 --- [main] com.hmall.item.ItemServiceApplication    : The following 1 profile is active: "dev"
+17:17:22:303  INFO 34276 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d429b62f-ffea-3685-9c3b-2490d38438c3
+17:17:22:719  INFO 34276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+17:17:22:733  INFO 34276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:17:22:733  INFO 34276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:17:22:978  INFO 34276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:17:22:978  INFO 34276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1796 ms
+17:17:23:928  INFO 30716 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:17:25:108  INFO 30716 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+17:17:25:109  INFO 30716 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+17:17:26:795  INFO 34276 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:17:27:468  INFO 30716 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+17:17:27:473  INFO 30716 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+17:17:27:475  INFO 30716 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+17:17:27:475  INFO 30716 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+17:17:27:580  INFO 30716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7081 (http) with context path ''
+17:17:27:594  INFO 30716 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:7081 register finished
+17:17:27:907  INFO 34276 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+17:17:27:907  INFO 34276 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+17:17:28:270  INFO 30716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:17:28:271  INFO 30716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:17:28:302  INFO 30716 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:17:28:441  INFO 30716 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 10.938 seconds (JVM running for 11.972)
+17:17:30:133  INFO 34276 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+17:17:30:136  INFO 34276 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+17:17:30:138  INFO 34276 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+17:17:30:139  INFO 34276 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+17:17:30:243  INFO 34276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+17:17:30:253  INFO 34276 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 10.165.161.72:8081 register finished
+17:17:31:099  INFO 34276 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:17:31:103  INFO 34276 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:17:31:131  INFO 34276 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:17:31:255  INFO 34276 --- [main] com.hmall.item.ItemServiceApplication    : Started ItemServiceApplication in 11.443 seconds (JVM running for 12.653)
+17:18:34:600  WARN 30716 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+17:18:34:601  WARN 30716 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:18:34:601  WARN 30716 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:18:34:602  WARN 30716 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:18:34:602  WARN 30716 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+17:18:34:602  WARN 30716 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:18:34:610  WARN 34276 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+17:18:34:610  WARN 34276 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:18:34:611  WARN 34276 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:18:34:613  WARN 34276 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:18:34:613  WARN 34276 --- [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+17:18:34:614  WARN 34276 --- [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:18:35:218  INFO 30716 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:18:35:225  INFO 30716 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:18:35:246  INFO 34276 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:18:35:253  INFO 34276 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
