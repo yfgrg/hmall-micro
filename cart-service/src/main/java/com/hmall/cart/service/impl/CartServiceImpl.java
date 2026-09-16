@@ -4,6 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.api.item.dto.ItemDTO;
+import com.hmall.cart.config.CartProperties;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
@@ -37,6 +38,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Autowired
     private ItemClient itemClient;
 
+    private final CartProperties cartProperties;
+
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
         // 1.获取登录用户
@@ -62,6 +65,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     @Override
     public List<CartVO> queryMyCarts() {
+
         // 1.查询我的购物车列表
         List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
         if (CollUtils.isEmpty(carts)) {
@@ -111,10 +115,21 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         remove(queryWrapper);
     }
 
+    @Override
+    public void removeByItemIds(Long userId, Collection<Long> itemIds) {
+        // 1.构建删除条件，userId和itemId
+        QueryWrapper<Cart> queryWrapper = new QueryWrapper<Cart>();
+        queryWrapper.lambda()
+                .eq(Cart::getUserId, userId)
+                .in(Cart::getItemId, itemIds);
+        // 2.删除
+        remove(queryWrapper);
+    }
+
     private void checkCartsFull(Long userId) {
         int count = lambdaQuery().eq(Cart::getUserId, userId).count();
-        if (count >= 10) {
-            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", 10));
+        if (count >= cartProperties.getMaxAmount()) {
+            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", cartProperties.getMaxAmount()));
         }
     }
 

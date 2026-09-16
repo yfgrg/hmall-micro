@@ -1,6 +1,8 @@
 package com.hmall.cart.controller;
 
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
@@ -9,16 +11,20 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
+
 
 @Api(tags = "购物车相关接口")
 @RestController
 @RequestMapping("/carts")
 @RequiredArgsConstructor
+@Slf4j
 public class CartController {
     private final ICartService cartService;
 
@@ -41,9 +47,22 @@ public class CartController {
     }
 
     @ApiOperation("查询购物车列表")
+    @SentinelResource(value = "queryMyCarts",
+            fallback = "queryMyCartsFallback",
+            blockHandler = "queryMyCartsBlockHandler")
     @GetMapping
     public List<CartVO> queryMyCarts(){
         return cartService.queryMyCarts();
+    }
+    //当发生非限流非熔断异常走此方法
+    public List<CartVO>  queryMyCartsFallback(Throwable throwable){
+        log.error("非限流、非熔断异常执行的降级方法，throwable:",  throwable);
+        return new ArrayList<>();
+    }
+    //当发生熔断、限流走此方法
+    public List<CartVO>  queryMyCartsBlockHandler( BlockException blockException){
+        log.error("触发限流、熔断时执行的降级方法，blockException:",  blockException);
+        return new ArrayList<>();
     }
     @ApiOperation("批量删除购物车中商品")
     @ApiImplicitParam(name = "ids", value = "购物车条目id集合")

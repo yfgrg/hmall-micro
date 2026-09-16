@@ -16,6 +16,18 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
+
+        <!-- Nacos 配置中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- 加载 bootstrap.yaml -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
         <!--common-->
         <dependency>
             <groupId>com.hmall</groupId>
@@ -51,6 +63,12 @@
             <groupId>com.hmall</groupId>
             <artifactId>hm-api</artifactId>
             <version>1.0.0</version>
+        </dependency>
+
+        <!--seata-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
         </dependency>
     </dependencies>
     <build>

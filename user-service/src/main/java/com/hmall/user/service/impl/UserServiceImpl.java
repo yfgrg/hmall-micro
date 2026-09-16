@@ -18,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 /**
@@ -71,7 +72,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         System.out.println("Encoded password: " + encodedPassword);
     }
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void deductMoney(String pw, Integer totalFee) {
+
         log.info("开始扣款");
         // 1.校验密码
         User user = getById(UserContext.getUser());
@@ -82,6 +85,25 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         // 2.尝试扣款
         int i = baseMapper.updateMoney(UserContext.getUser(), totalFee);
+        if (i <= 0) {
+            throw new RuntimeException("扣款失败，可能是余额不足！");
+        }
+        log.info("扣款成功");
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void deductMoney(Long userId, String pw, Integer totalFee) {
+        log.info("开始扣款");
+        // 1.校验密码
+        User user = getById(userId);
+        if(user == null || !passwordEncoder.matches(pw, user.getPassword())){
+            // 密码错误
+            throw new BizIllegalException("用户密码错误");
+        }
+
+        // 2.尝试扣款
+        int i = baseMapper.updateMoney(userId, totalFee);
         if (i <= 0) {
             throw new RuntimeException("扣款失败，可能是余额不足！");
         }

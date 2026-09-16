@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients(basePackages = {"com.hmall.api"})
 @MapperScan("com.hmall.cart.mapper")
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.hmall.cart","com.hmall.api"})
 public class CartServiceApplication {
 
     public static void main(String[] args) {
