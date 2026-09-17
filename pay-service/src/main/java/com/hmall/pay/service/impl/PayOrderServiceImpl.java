@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.api.trade.TradeClient;
 import com.hmall.api.user.UserClient;
+import com.hmall.common.constants.MqConstants;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.UserContext;
@@ -16,6 +17,8 @@ import com.hmall.pay.mapper.PayOrderMapper;
 import com.hmall.pay.service.IPayOrderService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,7 +34,10 @@ import java.time.LocalDateTime;
  */
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> implements IPayOrderService {
+
+    private final RabbitTemplate rabbitTemplate;
 
     private final UserClient userClient;
 
@@ -64,7 +70,12 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
             throw new BizIllegalException("交易已支付或关闭！");
         }
         // 5.修改订单状态
-        tradeClient.markOrderPaySuccess(po.getBizOrderNo());
+//        tradeClient.markOrderPaySuccess(po.getBizOrderNo());
+        try {
+            rabbitTemplate.convertAndSend(MqConstants.PAY_EXCHANGE_NAME, MqConstants.PAY_SUCCESS_KEY, po.getBizOrderNo());
+        } catch (Exception e) {
+            log.error("支付成功的消息发送失败，支付单id：{}， 交易单id：{}", po.getId(), po.getBizOrderNo(), e);
+        }
     }
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {
@@ -75,6 +86,27 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
                 // 支付状态的乐观锁判断
                 .in(PayOrder::getStatus, PayStatus.NOT_COMMIT.getValue(), PayStatus.WAIT_BUYER_PAY.getValue())
                 .update();
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void closePayOrder(Long bizOrderNo) {
+        boolean success = lambdaUpdate()
+                .set(PayOrder::getStatus, PayStatus.TRADE_CLOSED.getValue())
+                .eq(PayOrder::getBizOrderNo, bizOrderNo)
+                .in(PayOrder::getStatus,
+                        PayStatus.NOT_COMMIT.getValue(),
+                        PayStatus.WAIT_BUYER_PAY.getValue())
+                .update();
+        if (success) {
+            return;
+        }
+
+        // 支付和关单并发时，禁止关闭已经支付成功的交易订单
+        PayOrder payOrder = queryByBizOrderNo(bizOrderNo);
+        if (payOrder != null && PayStatus.TRADE_SUCCESS.equalsValue(payOrder.getStatus())) {
+            throw new BizIllegalException("支付单已经支付成功，无法关闭");
+        }
     }
 
 

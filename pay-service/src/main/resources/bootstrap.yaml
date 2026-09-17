@@ -19,3 +19,4 @@ spring:
           - dataId: shared-feign.yaml # 共享feign配置
           - dataId: shared-seata.yaml # 共享seata配置
           - dataId: shared-sentinel.yaml # 共享sentinel配置
+          - dataId: shared-rabbitmq.yaml
